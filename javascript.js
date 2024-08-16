@@ -46,4 +46,14 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+function playGame(){
+    while (true){
+        if (computerScore == 5 || humanScore == 5) {
+            break;
+        }
+        playRound(getHumanChoice(), getComputerChoice());
+        console.log("your score: " + humanScore + " , Computer's score : " + computerScore);
+    }
+}
+
+playGame();
