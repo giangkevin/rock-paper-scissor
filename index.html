@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html>
     <head>
         <meta charset="UTF-8">
-        <title>Rock Paper Scissor</title>
+        <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="style.css">
-        <script src="javascript.js"></script>
+        <script src="javascript.js" defer></script>
     </head>
     <body>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissor">Scissor</button>
+        <header>
+            <h1>Rock, Paper, Scissors</h1>
+            <h2>FT5</h2>
+        </header>
+        <main>
+            <section class="player">
+                <h2>Player's choice: </h2>
+                <div class="choices">
+                    <div class="choice">
+                        <button class="choice-button" id="rock">
+                            <img src="./images/stone-svgrepo-com.svg" alt="pierre">
+                        </button>
+                    </div>
+                    <div class="choice">
+                        <button class="choice-button" id="paper">
+                            <img src="./images/leaf-svgrepo-com.svg" alt="feuille">
+                        </button>
+                    </div>
+                    <div class="choice">
+                        <button class="choice-button" id="scissor">
+                            <img src="./images/scissor-hand-drawn-opened-tool-svgrepo-com.svg" alt="ciseaux">
+                        </button>
+                    </div>
+                </div>
+                <h3>Score :</h3>
+                <div class="players-score"></div>
+            </section>
+            <div class="vl"></div>
+            <section class="computer">
+                <h2>Computer's choice: </h2>
+                <div class="choice">
+                    <img src="./images/question-mark-svgrepo-com.svg" alt="questionMark" id="computer-choice">
+                </div>
+                <h3>Score :</h3>
+                <div class="computers-score"></div>
+            </section>
+        </main>
+        <footer>
+        </footer>
     </body>
 </html>
