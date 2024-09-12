@@ -1,0 +1,46 @@
+body{
+   font-family: Helvetica, sans-serif;
+   background-color: #272343;
+}
+
+header{
+   color: #ffffff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+main{
+   display: flex;
+   justify-content: center;
+   color: #ffffff;
+   gap: 32px;
+   margin-right: 320px;
+}
+
+.choices{
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 40px;
+}
+
+.choice{
+   flex-shrink: 1;
+}
+
+button{
+   padding: 0;
+   border: 0;
+   background: none;
+}
+
+img{
+   border: 3px solid #bae8e8;
+   border-radius: 8px;
+   height: 150px;
+   width: 150px;
+}
+.vl{
+   border-left: 3px solid #bae8e8;
+}
