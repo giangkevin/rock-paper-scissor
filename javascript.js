@@ -68,9 +68,6 @@ humanChoice.forEach((button) => {
         playRound(button.id, getComputerChoice());
         changeImage();
         updateScore();
-        
-
-
     });
 });
 
