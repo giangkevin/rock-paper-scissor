@@ -13,10 +13,9 @@ header{
 
 main{
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    color: #ffffff;
-   gap: 32px;
-   margin-right: 320px;
+   text-align: center;
 }
 
 .choices{
@@ -30,7 +29,7 @@ main{
    flex-shrink: 1;
 }
 
-button{
+.choice-button{
    padding: 0;
    border: 0;
    background: none;
@@ -39,8 +38,8 @@ button{
 img{
    border: 3px solid #bae8e8;
    border-radius: 8px;
-   height: 150px;
-   width: 150px;
+   height: 100px;
+   width: 100px;
 }
 .vl{
    border-left: 3px solid #bae8e8;

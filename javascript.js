@@ -15,7 +15,7 @@ function changeImage() {
     } else if (computerChoice === 'paper') {
         image.src = './images/leaf-svgrepo-com.svg';
         image.alt = 'paper';
-    } else if (computerChoice === 'scissor'){
+    } else if (computerChoice === 'scissor') {
         image.src = './images/scissor-hand-drawn-opened-tool-svgrepo-com.svg';
         image.alt = 'scissor';
     }
@@ -50,7 +50,7 @@ function playRound(humanChoice, computerChoice) {
             heading.textContent = "You lose! " + humanChoice + " lose to " + computerChoice;
             computerScore += 1;
         } else if (computerChoice === 'paper') {
-           heading.textContent = "You win! " + humanChoice + " beats " + computerChoice;
+            heading.textContent = "You win! " + humanChoice + " beats " + computerChoice;
             humanScore += 1;
         } else if (humanChoice === computerChoice) {
             heading.textContent = "You both picked " + humanChoice;
@@ -71,16 +71,16 @@ humanChoice.forEach((button) => {
     });
 });
 
-function updateScore(){
+function updateScore() {
     const playersScore = document.querySelector('.players-score');
     const computersScore = document.querySelector('.computers-score');
     playersScore.textContent = humanScore;
     computersScore.textContent = computerScore;
     const winner = document.querySelector(".winner");
 
-if (humanScore == 5){
-    winner.textContent = "You won!";
-} else if (computerScore == 5){
-    winner.textContent = "The computer won!";
-}
+    if (humanScore == 5) {
+        winner.textContent = "You won!";
+    } else if (computerScore == 5) {
+        winner.textContent = "The computer won!";
+    }
 }
