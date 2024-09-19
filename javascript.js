@@ -95,5 +95,6 @@ function playAgain(){
         computerScore = 0;
         updateScore();
         button.textContent = "";
+        button.style.border = "none";
     });
 }
