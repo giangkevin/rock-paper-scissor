@@ -84,9 +84,11 @@ function updateScore() {
     } else if (computerScore == 5) {
         winner.textContent = "The computer won!";
     }
+
 }
 
 function playAgain(){
+    const winner = document.querySelector(".winner");
     const button = document.querySelector(".play-again");
     button.textContent = "Play Again";
     button.style.border = "3px solid #bae8e8";
@@ -95,6 +97,7 @@ function playAgain(){
         computerScore = 0;
         updateScore();
         button.textContent = "";
+        winner.textContent = "";
         button.style.border = "none";
     });
 }
