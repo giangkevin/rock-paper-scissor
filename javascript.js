@@ -1,4 +1,4 @@
-let humanScore = 0;
+let playerScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
@@ -31,7 +31,7 @@ function playRound(humanChoice, computerChoice) {
             computerScore += 1;
         } else if (computerChoice === 'scissor') {
             heading.textContent = "You win! " + humanChoice + " beats " + computerChoice;
-            humanScore += 1;
+            playerScore += 1;
         } else if (humanChoice === computerChoice) {
             heading.textContent = "You both picked " + humanChoice;
         }
@@ -41,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
             computerScore += 1;
         } else if (computerChoice === 'rock') {
             heading.textContent = "You win! " + humanChoice + " beats " + computerChoice;
-            humanScore += 1;
+            playerScore += 1;
         } else if (humanChoice === computerChoice) {
             heading.textContent = "You both picked " + humanChoice;
         }
@@ -51,7 +51,7 @@ function playRound(humanChoice, computerChoice) {
             computerScore += 1;
         } else if (computerChoice === 'paper') {
             heading.textContent = "You win! " + humanChoice + " beats " + computerChoice;
-            humanScore += 1;
+            playerScore += 1;
         } else if (humanChoice === computerChoice) {
             heading.textContent = "You both picked " + humanChoice;
         }
@@ -59,10 +59,11 @@ function playRound(humanChoice, computerChoice) {
     header.appendChild(heading);
 }
 
-const humanChoice = document.querySelectorAll("button");
+const humanChoice = document.querySelectorAll(".choice-button");
 humanChoice.forEach((button) => {
     button.addEventListener('click', () => {
-        if (computerScore == 5 || humanScore == 5) {
+        if (computerScore == 5 || playerScore == 5) {
+            playAgain();
             return;
         }
         playRound(button.id, getComputerChoice());
@@ -74,13 +75,25 @@ humanChoice.forEach((button) => {
 function updateScore() {
     const playersScore = document.querySelector('.players-score');
     const computersScore = document.querySelector('.computers-score');
-    playersScore.textContent = humanScore;
+    playersScore.textContent = playerScore;
     computersScore.textContent = computerScore;
     const winner = document.querySelector(".winner");
 
-    if (humanScore == 5) {
+    if (playerScore == 5) {
         winner.textContent = "You won!";
     } else if (computerScore == 5) {
         winner.textContent = "The computer won!";
     }
+}
+
+function playAgain(){
+    const button = document.querySelector(".play-again");
+    button.textContent = "Play Again";
+    button.style.border = "3px solid #bae8e8";
+    button.addEventListener('click', () =>{
+        playerScore = 0;
+        computerScore = 0;
+        updateScore();
+        button.textContent = "";
+    });
 }

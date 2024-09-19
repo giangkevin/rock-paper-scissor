@@ -41,14 +41,22 @@ img{
    height: 100px;
    width: 100px;
 }
-.vl{
-   border-left: 3px solid #bae8e8;
-}
 
 footer{
    margin-top: 50px;
+   display: flex;
+   flex-direction: column;
+
 }
 .winner {
    color : #ffffff;
    text-align: center;
+}
+
+.play-again{
+   align-self: center;
+   color: #ffffff;
+   background-color: #272343;
+   border: none;
+   border-radius: 8px; 
 }
