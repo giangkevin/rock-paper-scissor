@@ -63,7 +63,6 @@ const humanChoice = document.querySelectorAll(".choice-button");
 humanChoice.forEach((button) => {
     button.addEventListener('click', () => {
         if (computerScore == 5 || playerScore == 5) {
-            playAgain();
             return;
         }
         playRound(button.id, getComputerChoice());
@@ -81,8 +80,10 @@ function updateScore() {
 
     if (playerScore == 5) {
         winner.textContent = "You won!";
+        playAgain();
     } else if (computerScore == 5) {
         winner.textContent = "The computer won!";
+        playAgain();
     }
 
 }
